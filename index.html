@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coaching Class</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header nav {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        .poster {
+            background-color: #ffffff;
+            border: 2px solid #4CAF50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 40px;
+            flex-wrap: wrap;
+        }
+        .feature {
+            background-color: #ffffff;
+            border: 1px solid #4CAF50;
+            padding: 15px;
+            border-radius: 8px;
+            width: 25%;
+            margin: 10px;
+        }
+        .class-images {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .class-images img {
+            margin: 10px;
+            width: 200px;
+            height: 150px;
+            border-radius: 8px;
+            border: 2px solid #4CAF50;
+        }
+        .qr-code {
+            margin: 20px 0;
+        }
+        .enroll-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .enroll-btn:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+        .model {
+            background-color: white;
+            width: 300px;
+            height: auto;
+            border-radius: 20px;
+            border: 2px solid #4CAF50;
+            position: relative;
+            padding: 20px;
+        }
+        .form-ip {
+            width: 250px;
+            height: 35px;
+            margin-top: 10px;
+            border-radius: 25px;
+            padding-left: 10px;
+            border: 2px solid #4CAF50;
+            font-size: 15px;
+        }
+        .form-btn {
+            margin-top: 20px;
+        }
+        #close {
+            height: 30px;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            cursor: pointer; 
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+            .feature {
+                width: 80%;
+                margin: 10px 0;
+            }
+            .class-images img {
+                width: 150px;
+                height: 100px;
+            }
+            .model {
+                width: 80%;
+            }
+            .form-ip {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            header nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            header nav a {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+            .poster {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Elevate Coaching</h1>
+    <nav>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="#profile">Profile</a>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="poster">
+        <h2>Join Our Class Today!</h2>
+        <p>Learn from the best tutors and excel in your studies!</p>
+    </div>
+    
+    <div class="features">
+        <div class="feature">
+            <h3>Expert Tutors</h3>
+            <p>Get guidance from experienced professionals.</p>
+        </div>
+        <div class="feature">
+            <h3>Flexible Timing</h3>
+            <p>Choose classes that fit your schedule.</p>
+        </div>
+        <div class="feature">
+            <h3>Interactive Sessions</h3>
+            <p>Engage in dynamic and interactive learning.</p>
+        </div>
+    </div>
+    
+    <div class="class-images">
+        <h3>Our Classes</h3>
+        <img src="./img1.jfif" alt="Class 1">
+        <img src="./img2.jfif" alt="Class 2">
+        <img src="./img3.jfif" alt="Class 3">
+        <img src="./img4.jfif" alt="Class 4">
+    </div>
+    
+    <div class="qr-code">
+        <h3>Scan to Enroll!</h3>
+        <img src="./QR.png" alt="QR Code" />
+    </div>
+    <div>
+        <a href="#enroll" class="enroll-btn" onclick="openModel('enroll')">Enroll Now</a>
+        <a href="#message" class="enroll-btn" onclick="openModel('message')">Send Message</a>
+    </div>
+    
+    <div class="overlay" id="overlay">
+        <div class="model" id="enroll-model" style="display:none;">
+            <img src="./close.png" id="close" onclick="closeModel()"/>
+            <h3>Enroll Now</h3>
+            <form class="form-container">
+                <input type="text" placeholder="Enter your name" class="form-ip"/>
+                <input type="text" placeholder="Enter your email" class="form-ip"/>
+                <input type="text" placeholder="Enter your phone no." class="form-ip"/>
+                <input type="date" placeholder="Enter your DOB" class="form-ip"/>
+                <input type="text" placeholder="Enter your address" class="form-ip"/>
+            </form>
+            <div class="form-btn">
+                <a href="#enroll" class="enroll-btn">Proceed to Payment</a>
+            </div>
+        </div>
+        
+        <div class="model" id="message-model" style="display:none;">
+            <img src="./close.png" id="close" onclick="closeModel()"/>
+            <h3>Send Message</h3>
+            <form class="form-container">
+                <input type="text" placeholder="Enter your name" class="form-ip"/>
+                <input type="text" placeholder="Enter your email" class="form-ip"/>
+                <input type="text" placeholder="Enter your message" class="form-ip"/>
+            </form>
+            <div class="form-btn">
+                <a href="#message" class="enroll-btn">Send</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>Follow us:</p>
+    <a href="#facebook">Facebook</a>
+    <a href="#twitter">Twitter</a>
+    <a href="#instagram">Instagram</a>
+    <p>Address: 123 Coaching Lane, Education City</p>
+</footer>
+
+<script>
+    function openModel(type) {
+        const overlayEle = document.getElementById('overlay');
+        const enrollModel = document.getElementById('enroll-model');
+        const messageModel = document.getElementById('message-model');
+        
+        overlayEle.style.display = "flex";
+        
+        if (type === 'enroll') {
+            enrollModel.style.display = "block";
+            messageModel.style.display = "none";
+        } else {
+            enrollModel.style.display = "none";
+            messageModel.style.display = "block";
+        }
+    }
+
+    function closeModel() {
+        const overlayEle = document.getElementById('overlay');
+        overlayEle.style.display = "none";
+    }
+</script>
+</body>
+</html>
